@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace ExportTest_001
 {
     public class DataModel
-    {
+    {        
         public Person GetPerson()
         {
             var person = new Person

@@ -6,7 +6,11 @@ namespace ExportTest_001
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var export = new Export();
+
+            export.ExportData(new DataModel().GetPerson());
+
+            Console.ReadLine();
         }
     }
 }
