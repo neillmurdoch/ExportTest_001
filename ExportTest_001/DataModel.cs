@@ -28,10 +28,10 @@ namespace ExportTest_001
                         Address1 = "Address 1 Line 1",
                         Address2 = "Address 1 Line 2",
                         Value = 100, 
-                        Dates = new List<DateTime>
+                        Dates = new List<string>
                         {
-                            new DateTime(2019, 07, 01),
-                            new DateTime(2019, 07, 02)
+                            new DateTime(2019, 07, 01).ToShortDateString(),
+                            new DateTime(2019, 07, 02).ToShortDateString()
                         },
                         Flags = new List<bool>
                         {
@@ -50,9 +50,9 @@ namespace ExportTest_001
                         Address1 = "Address 2 Line 1",
                         Address2 = "Address 2 Line 2",
                         Value = 200,
-                        Dates = new List<DateTime>
+                        Dates = new List<string>
                         {
-                            new DateTime(2019, 07, 03),
+                            new DateTime(2019, 07, 03).ToShortDateString(),
                         },
                         Flags = new List<bool>
                         {
@@ -74,11 +74,11 @@ namespace ExportTest_001
                             10000,
                             20000
                         },
-                        Dates = new List<DateTime>
+                        Dates = new List<string>
                         {
-                            new DateTime(2019, 07, 04),
-                            new DateTime(2019, 07, 05),
-                            new DateTime(2019, 07, 06),
+                            new DateTime(2019, 07, 04).ToShortDateString(),
+                            new DateTime(2019, 07, 05).ToShortDateString(),
+                            new DateTime(2019, 07, 06).ToShortDateString(),
                         },
                         Colour = "Black",
                         RHD = true,
@@ -122,9 +122,9 @@ namespace ExportTest_001
                             40000,
                             50000
                         },
-                        Dates = new List<DateTime>
+                        Dates = new List<string>
                         {
-                            new DateTime(2019, 07, 07),
+                            new DateTime(2019, 07, 07).ToShortDateString(),
                         },
                         Colour = "White",
                         RHD = true,
@@ -145,11 +145,11 @@ namespace ExportTest_001
                         {
                             60000
                         },
-                        Dates = new List<DateTime>
+                        Dates = new List<string>
                         {
-                            new DateTime(2019, 07, 08),
-                            new DateTime(2019, 07, 09),
-                            new DateTime(2019, 07, 10),
+                            new DateTime(2019, 07, 08).ToShortDateString(),
+                            new DateTime(2019, 07, 09).ToShortDateString(),
+                            new DateTime(2019, 07, 10).ToShortDateString(),
                         },
                         Colour = "Silver",
                         RHD = false,
@@ -195,7 +195,7 @@ namespace ExportTest_001
         public string Address1 { get; set; }
         public string Address2 { get; set; }
         public int Value { get; set; }
-        public List<DateTime> Dates { get; set; }
+        public List<string> Dates { get; set; }
         public List<bool> Flags { get; set; }
         public List<Postcode> Postcodes { get; set; }
     }
@@ -208,7 +208,7 @@ namespace ExportTest_001
     public class Car
     {
         public List<int> Values { get; set; }
-        public List<DateTime> Dates { get; set; }
+        public List<string> Dates { get; set; }
         public string Colour { get; set; }
         public bool RHD { get; set; }
         public List<Wheel> Wheels { get; set; }
